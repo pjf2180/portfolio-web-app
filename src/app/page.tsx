@@ -1,10 +1,13 @@
 import { Background } from "./components/background/background.component";
+import { Header } from "./components/header/header.component";
 
 export default function Home() {
   return (
-    <main>
+    <div className="h-[100vh] flex flex-col justify-center">
       <Background />
-      <div className="p-[100px] pl-8 pr-8"></div>
-    </main>
+      {/* <Header text="I'm Paul Jiménez" /> */}
+      <Header text="I'm Paul Jiménez" />
+      <Header typeAnimation text="Full Stack Software Engineer" />
+    </div>
   );
 }

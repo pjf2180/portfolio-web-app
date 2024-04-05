@@ -1,0 +1,31 @@
+.text {
+    text-shadow: 0 1px 3px #000;
+    color: #fff;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+
+.caret {
+    vertical-align: middle;
+    font-size: 80px;
+    font-weight: 100;
+}
+
+.typingAnimation::after {
+    content: "|";
+    animation: typing 0.7s infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "";
+    }
+    50% {
+        content: "|";
+    }
+    100% {
+        content: "";
+    }
+}
