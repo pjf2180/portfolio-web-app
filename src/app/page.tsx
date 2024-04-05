@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className="h-[100vh] flex flex-col justify-center">
       <Background />
-      {/* <Header text="I'm Paul Jiménez" /> */}
       <Header text="I'm Paul Jiménez" />
       <Header typeAnimation text="Full Stack Software Engineer" />
     </div>
