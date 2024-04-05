@@ -14,10 +14,14 @@ export function Header({ text, typeAnimation }: HeaderProps) {
     typeAnimation ? h1Ref : null,
     text,
     () => {
-      caretRef.current!.innerText = "|";
+      if (caretRef.current) {
+        caretRef.current.innerText = "|";
+      }
     },
     () => {
-      caretRef.current!.innerText = "";
+      if (caretRef.current) {
+        caretRef.current.innerText = "";
+      }
       caretRef.current?.classList.add(style.typingAnimation);
     }
   );
@@ -34,9 +38,7 @@ export function Header({ text, typeAnimation }: HeaderProps) {
   );
   const regularContent = (
     <>
-      <h1 className={style.text}>
-        {text}
-      </h1>
+      <h1 className={style.text}>{text}</h1>
     </>
   );
   return typeAnimation ? animatedContent : regularContent;

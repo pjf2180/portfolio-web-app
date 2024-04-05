@@ -24,8 +24,7 @@ export default function RootLayout({
         <div className="fixed top-0 left-0 right-0 container mx-auto px-4">
           <Navbar />
         </div>
-        {/* <div className="h-[100vh] w-[100vw] pt-[100px] pl-8 pr-8">{children}</div> */}
-        <div className="container mx-auto px-4">{children}</div>
+        <div className="container mx-auto px-4 h-[100vh]">{children}</div>
       </body>
     </html>
   );

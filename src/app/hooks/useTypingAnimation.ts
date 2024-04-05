@@ -16,7 +16,9 @@ export function useTypingAnimation(
     }
     const intervalId = setInterval(() => {
       const typeResult = type();
-      elRef.current!.innerText = typeResult.value;
+      if(elRef.current){
+        elRef.current.innerText = typeResult.value;
+      }
       if (typeResult.done) {
         clearInterval(intervalId);
         if (animationEnd) {
