@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/navbar/navbar.component";
-const roboto = Roboto({
-  weight: "400",
+const roboto = Roboto_Mono({
+  weight: ['300', '400', '700'],
   subsets: ["latin"],
-  display: "swap",
+  variable: "--font-roboto"
 });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.variable} font-sans`}>
         <div className="fixed top-0 left-0 right-0 container mx-auto px-4">
           <Navbar />
         </div>
