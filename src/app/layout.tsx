@@ -3,9 +3,9 @@ import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/navbar/navbar.component";
 const roboto = Roboto_Mono({
-  weight: ['300', '400', '700'],
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
-  variable: "--font-roboto"
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} font-sans`}>
-        <div className="fixed top-0 left-0 right-0 container mx-auto px-4">
+        <div className="container mx-auto px-4">
           <Navbar />
+          {children}
         </div>
-        <div className="container mx-auto px-4 h-[100vh]">{children}</div>
       </body>
     </html>
   );

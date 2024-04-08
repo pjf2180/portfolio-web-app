@@ -25,7 +25,7 @@ export function Navbar() {
     },
   ];
   return (
-    <div className="flex p-8">
+    <div className="flex p-8 z-[1] relative">
       <ul className="flex">
         {menuItems.map((menuItem: MenuItem,idx) => {
           return (
