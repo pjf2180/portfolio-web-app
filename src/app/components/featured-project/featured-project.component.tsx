@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 interface FeaturedProjectProps {
   projectId: string;
   projectName: string;
@@ -21,7 +23,9 @@ export function FeaturedProject({
         <p>{description}</p>
       </div>
       <div className="flex justify-center border-[1px] border-t-0">
-        <button className="w-full p-3 bg-black text-white">Learn More</button>
+        <Link href={`/projects/${projectId}`}>
+          <button className="w-full p-3 bg-black text-white">Learn More</button>
+        </Link>
       </div>
     </div>
   );
