@@ -1,18 +1,13 @@
 import Image from "next/image";
 import { CardGallery } from "../card-gallery/card-gallery.component";
+import { ProjectDetails } from "@/app/lib/data/projects/getProject";
 
 interface ProjectDetailProps {
-  headingText: string;
-  imageSources: string[];
-  projectDescription: string;
-  techStack: { name: string; logo: string }[];
+  details: ProjectDetails;
 }
-export default function ProjectDetail({
-  headingText,
-  imageSources,
-  projectDescription,
-  techStack,
-}: ProjectDetailProps) {
+export default function ProjectDetail({ details }: ProjectDetailProps) {
+  const { techStack, headingText, projectDescription, imageSources } = details;
+
   const techStackNames: string[] = techStack.map((t) => t.name);
 
   return (
@@ -38,7 +33,7 @@ export default function ProjectDetail({
               return (
                 <div className="w-full h-[350px] relative border-[1px] border-black ">
                   <Image
-                    src={"/crown-preview.png"}
+                    src={imageSource}
                     alt="Crown Clothing Home Page"
                     fill
                     priority
@@ -46,30 +41,6 @@ export default function ProjectDetail({
                 </div>
               );
             })}
-            <div className="w-full h-[350px] relative border-[1px] border-black ">
-              <Image
-                src={"/crown-preview.png"}
-                alt="Crown Clothing Home Page"
-                fill
-                priority
-              />
-            </div>
-            <div className="w-full h-[350px] relative border-[1px] border-black ">
-              <Image
-                src={"/e-commerce/cart-dropdown.png"}
-                alt="Crown Clothing Home Page"
-                fill
-                priority
-              />
-            </div>
-            <div className="w-full h-[350px] relative border-[1px] border-black ">
-              <Image
-                src={"/e-commerce/payment.png"}
-                alt="Crown Clothing Home Page"
-                fill
-                priority
-              />
-            </div>
           </CardGallery>
         </div>
       </div>

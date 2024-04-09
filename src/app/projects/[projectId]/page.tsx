@@ -1,23 +1,15 @@
 import ProjectDetail from "@/app/components/project-detail/project-detail.component";
+import { getProject } from "@/app/lib/data/projects/getProject";
 import { listProjects } from "@/app/lib/data/projects/listProjects";
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
   params: { projectId: string };
 }) {
-  return (
-    <ProjectDetail
-      headingText="E-Commerce"
-      projectDescription="The most awesome description"
-      techStack={[{logo: '', name: 'React'},{logo: '', name: 'React'},]}
-      imageSources={[
-        "crown-preview",
-        "/e-commerce/cart-dropdown",
-        "/e-commerce/payment",
-      ]}
-    />
-  );
+  const projectDetails = await getProject(params.projectId);
+
+  return <ProjectDetail details={projectDetails} />;
 }
 
 export async function generateStaticParams() {
