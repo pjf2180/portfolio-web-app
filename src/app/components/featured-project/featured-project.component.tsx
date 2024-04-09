@@ -6,12 +6,14 @@ interface FeaturedProjectProps {
   projectName: string;
   description: string;
   imgSrc: string;
+  hideLink?: boolean;
 }
 export function FeaturedProject({
   projectId,
   projectName,
   description,
   imgSrc,
+  hideLink
 }: FeaturedProjectProps) {
   return (
     <div className="">
@@ -23,9 +25,9 @@ export function FeaturedProject({
         <p>{description}</p>
       </div>
       <div className="flex justify-center border-[1px] border-t-0">
-        <Link href={`/projects/${projectId}`}>
+        {!hideLink && <Link href={`/projects/${projectId}`}>
           <button className="w-full p-3 bg-black text-white">Learn More</button>
-        </Link>
+        </Link>}
       </div>
     </div>
   );

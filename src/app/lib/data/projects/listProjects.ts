@@ -3,6 +3,7 @@ export interface ProjectListing {
   projectName: string;
   description: string;
   imgSrc: string;
+  noDetails?: boolean;
 }
 export async function listProjects(): Promise<ProjectListing[]> {
   const projects: ProjectListing[] = [
@@ -19,6 +20,7 @@ export async function listProjects(): Promise<ProjectListing[]> {
       projectName: "Evaluation Web app",
       description:
         "Developed an evaluation web application from front-end to back-end allowing an organization to stay compliant under government regulations",
+      noDetails: true,
     },
     {
       projectId: "restaurantfinder",

@@ -15,6 +15,7 @@ export default async function ProjectsPage() {
             description={p.description}
             projectName={p.projectName}
             imgSrc={p.imgSrc}
+            hideLink={p.noDetails}
           />
         ))}
       </CardGallery>
