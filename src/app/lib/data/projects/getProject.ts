@@ -27,6 +27,21 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
       "/restaurantFinder/restaurant-map.png",
     ],
   },
+  caffemobileorder: {
+    headingText: "Caffe mobile order Website",
+    projectDescription:
+      "The website gives users a convenient way to see a local caffe's menu and purchase items online for pickup. It is completely mobile friendly.",
+    techStack: [
+      { logo: "", name: "Angular" },
+      { logo: "", name: "Firebase" },
+    ],
+    imageSources: [
+      "/caffeMobileOrder/caffe-menu.png",
+      "/caffeMobileOrder/caffe-product.png",
+      "/caffeMobileOrder/caffe-cart.png",
+    ],
+  },
+
 };
 
 export interface ProjectDetails {
