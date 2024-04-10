@@ -14,14 +14,7 @@ export async function listProjects(): Promise<ProjectListing[]> {
       description:
         "E-commerce clothing website using a serverless architecture and the React ecosystem for the frontend.",
     },
-    {
-      projectId: "evaluation",
-      imgSrc: "/evaluation-preview.png",
-      projectName: "Evaluation Web app",
-      description:
-        "Developed an evaluation web application from front-end to back-end allowing an organization to stay compliant under government regulations",
-      noDetails: true,
-    },
+
     {
       projectId: "restaurantfinder",
       imgSrc: "/meals-app-preview.png",
@@ -30,11 +23,19 @@ export async function listProjects(): Promise<ProjectListing[]> {
         "Mobile app to find restaurants around you or based on a location.",
     },
     {
-      projectId: "cafe",
-      imgSrc: "/caffe-preview.png",
+      projectId: "caffemobileorder",
+      imgSrc: "/caffeMobileOrder/caffe-menu.png",
       projectName: "Cafe Mobile Order",
       description:
         "Caffe online orders website using a serverless architecture and Angular.",
+    },
+    {
+      projectId: "evaluation",
+      imgSrc: "/evaluation-preview.png",
+      projectName: "Evaluation Web app",
+      description:
+        "Developed an evaluation web application from front-end to back-end allowing an organization to stay compliant under government regulations",
+      noDetails: true,
     },
   ];
   return projects;
