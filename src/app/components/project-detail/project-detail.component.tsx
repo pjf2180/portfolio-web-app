@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
-import { CardGallery } from "../card-gallery/card-gallery.component";
 import { ProjectDetails } from "@/app/lib/data/projects/getProject";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 interface ProjectDetailProps {
   details: ProjectDetails;
@@ -11,7 +12,7 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
   const techStackNames: string[] = techStack.map((t) => t.name);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center flex-wrap">
       <div className="w-full md:w-1/2 p-4">
         <div className="bg-gray-200 p-8">
           <div className="border-b-2 border-black pb-2 mb-4">
@@ -20,29 +21,36 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
           <h2 className="text-lg mb-2">Tech Stack</h2>
           <ul>
             {techStackNames.map((name: string) => (
-              <li className="text-xl">{name}</li>
+              <li key={name} className="text-xl">{name}</li>
             ))}
           </ul>
           <p className="pt-8 text-2xl">{projectDescription}</p>
         </div>
       </div>
       <div className="w-full md:w-1/2 p-4">
-        <div className="p-4">
-          <CardGallery>
+        <ResponsiveMasonry
+          columnsCountBreakPoints={{ 0: 2,  }}
+        >
+          <Masonry gutter="20px">
             {imageSources.map((imageSource) => {
               return (
-                <div className="w-full h-[350px] relative border-[1px] border-black ">
+                <div
+                  key={imageSource}
+                  className="w-full relative border-[1px] border-black "
+                >
                   <Image
                     src={imageSource}
                     alt="Crown Clothing Home Page"
-                    fill
                     priority
+                    height={800}
+                    width={300}
+                    style={{ width: "100%", height: "auto" }}
                   />
                 </div>
               );
             })}
-          </CardGallery>
-        </div>
+          </Masonry>
+        </ResponsiveMasonry>
       </div>
     </div>
   );
