@@ -13,22 +13,26 @@ export function FeaturedProject({
   projectName,
   description,
   imgSrc,
-  hideLink
+  hideLink,
 }: FeaturedProjectProps) {
   return (
     <div className="">
-      <div className="w-full h-[350px] relative border-[1px] border-b-0">
+      <div className="w-full h-[350px] relative border-black border-[1px] border-b-0">
         <Image src={imgSrc} alt="Crown Clothing Home Page" fill priority />
       </div>
-      <div className="bg-white border-[1px] h-[250px] p-3">
+      <div className="bg-white border-black border-[1px] h-[250px] p-3">
         <h3 className="font-bold text-xl my-4">{projectName}</h3>
         <p>{description}</p>
       </div>
-      <div className="flex justify-center border-[1px] border-t-0">
-        {!hideLink && <Link href={`/projects/${projectId}`}>
-          <button className="w-full p-3 bg-black text-white">Learn More</button>
-        </Link>}
-      </div>
+      {!hideLink && (
+        <div className="flex justify-center border-black border-[1px] border-t-0">
+          <Link className="w-full" href={`/projects/${projectId}`}>
+            <button className="w-full p-3 bg-black text-white">
+              Learn More
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
