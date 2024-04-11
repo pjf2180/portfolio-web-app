@@ -4,7 +4,13 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
     projectDescription: "The most awesome description",
     techStack: [
       { logo: "", name: "React" },
-      { logo: "", name: "React" },
+      { logo: "", name: "redux" },
+      { logo: "", name: "redux-saga" },
+      { logo: "", name: "reselect" },
+      { logo: "", name: "responsive-design" },
+      { logo: "", name: "jest" },
+      { logo: "", name: "enzyme" },
+      { logo: "", name: "nodejs" },
     ],
     imageSources: [
       "/crown-preview.png",
@@ -18,6 +24,7 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
       "This mobile app allows users to discover restaurants around them or based on a desired location. Users can view results as a list or on a map and can also see the details of the restaurant such as rating and menu.",
     techStack: [
       { logo: "", name: "React Native" },
+      { logo: "", name: "google-maps" },
       { logo: "", name: "Expo" },
     ],
     imageSources: [
@@ -34,6 +41,9 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
     techStack: [
       { logo: "", name: "Angular" },
       { logo: "", name: "Firebase" },
+      { logo: "", name: "Stripe" },
+      { logo: "", name: "Angular Material" },
+      { logo: "", name: "responsive-design" },
     ],
     imageSources: [
       "/caffeMobileOrder/caffe-menu.png",
