@@ -21,12 +21,12 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
           </div>
           <ul className="flex flex-wrap gap-2">
             {techStackNames.map((name: string) => (
-              <li key={name} className="text-white text-md whitespace-no-wrap">
+              <li key={name} className="text-white text-base whitespace-no-wrap">
                 <Chip>{name}</Chip>
               </li>
             ))}
           </ul>
-          <p className="pt-8 text-2xl">{projectDescription}</p>
+          <p className="pt-8 text-base">{projectDescription}</p>
         </div>
       </div>
       <div className="w-full lg:w-1/2 max-lg:p-3 pl-2">
