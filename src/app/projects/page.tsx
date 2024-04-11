@@ -6,7 +6,7 @@ export default async function ProjectsPage() {
   const featuredProjects = await listProjects();
 
   return (
-    <div className="h-full pt-40 px-8">
+    <div className="h-full px-2">
       <CardGallery>
         {featuredProjects.map((p) => (
           <FeaturedProject
