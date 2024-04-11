@@ -24,7 +24,7 @@ export async function listProjects(): Promise<ProjectListing[]> {
     },
     {
       projectId: "caffemobileorder",
-      imgSrc: "/caffeMobileOrder/caffe-menu.png",
+      imgSrc: "/caffeMobileOrder/caffe-menu-preview.png",
       projectName: "Cafe Mobile Order",
       description:
         "Caffe online orders website using a serverless architecture and Angular.",
