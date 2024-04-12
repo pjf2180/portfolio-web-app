@@ -27,7 +27,7 @@ export function Header({ text, typeAnimation }: HeaderProps) {
   );
   const animatedContent = (
     <>
-      <h1 className={style.text}>
+      <h1 className={`${style.text} text-6xl`}>
         <span ref={h1Ref}>&nbsp;</span>
         <span
           ref={caretRef}
@@ -38,7 +38,7 @@ export function Header({ text, typeAnimation }: HeaderProps) {
   );
   const regularContent = (
     <>
-      <h1 className={style.text}>{text}</h1>
+      <h1 className={`${style.text} text-6xl`}>{text}</h1>
     </>
   );
   return typeAnimation ? animatedContent : regularContent;
