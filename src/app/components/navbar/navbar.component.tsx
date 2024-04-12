@@ -25,10 +25,6 @@ export function Navbar() {
       displayText: "About me",
       href: "/about",
     },
-    {
-      displayText: "Contact",
-      href: "/contact",
-    },
   ];
   return (
     <div className="flex p-8 z-[1] relative">
