@@ -7,7 +7,7 @@ export default function AboutPage() {
         <h1 className="text-3xl font-bold">Paul Jimenez</h1>
       </div>
       <div className="flex flex-wrap gap-4 sm:justify-center lg:mt-15">
-        <div className="flex-1 md:min-w-[420px]" >
+        <div className="flex-1 md:min-w-[420px]">
           <h1 className="text-lg font-bold mb-4">About me</h1>
           <p className="text-base mb-4">
             I'm an experienced full stack engineer with a passion for creating
@@ -30,6 +30,7 @@ export default function AboutPage() {
             working collectively towards making incredible products.
           </p>
         </div>
+        <div>
           <Image
             src="/about.JPG"
             alt="Me in the forest"
@@ -37,6 +38,7 @@ export default function AboutPage() {
             height={800}
             width={500}
           />
+        </div>
       </div>
     </div>
   );
