@@ -11,7 +11,7 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
   const { techStack, headingText, projectDescription, imageSources } = details;
 
   const techStackNames: string[] = techStack.map((t) => t.name);
-
+  const paragraphs: string[] = projectDescription.split("\n");
   return (
     <div className="flex justify-center flex-wrap">
       <div className="w-full lg:w-1/2">
@@ -19,14 +19,19 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
           <div className="border-b-2 border-black pb-2 mb-4">
             <h1 className="text-3xl font-bold">{headingText}</h1>
           </div>
-          <ul className="flex flex-wrap gap-2">
+          <ul className="flex flex-wrap gap-2 mb-10">
             {techStackNames.map((name: string) => (
-              <li key={name} className="text-white text-base whitespace-no-wrap">
+              <li
+                key={name}
+                className="text-white text-base whitespace-no-wrap"
+              >
                 <Chip>{name}</Chip>
               </li>
             ))}
           </ul>
-          <p className="pt-8 text-base">{projectDescription}</p>
+          {paragraphs.map((p) => (
+            <p className="my-3 text-base">{p}</p>
+          ))}
         </div>
       </div>
       <div className="w-full lg:w-1/2 max-lg:p-3 pl-2">
