@@ -1,7 +1,11 @@
 const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
   ecommerce: {
     headingText: "E-Commerce",
-    projectDescription: "The most awesome description",
+    projectDescription: `I built this project because I wanted to learn React and its ecosystem as quickly as possible, when I started learning React a few years back, I already had experience with other web frameworks like Angular and ASP .NET MVC, which made my learning experience fairly easy.\n
+    This E-Commerce web app is fully functional, it has user authentication using firebase auth, it allows users to see products grouped by categories, items can be added to the cart and cart item quantity can be edited, once users are ready they can checkout using a Stripe checkout plugin.\n
+    In addition to mastering the React fundamentals, one of my main goals was to learn how to architecture large scale React applications taking maintainability and performance into account. For that, I learned how to use some of the most common state management and side effect libraries such as react-redux, reselect and redux-saga.\n
+    Learning React was fun, I truly enjoyed comparing how different technologies solve many common problems in web development like keeping the view in sync with state, state management and interaction with native browser APIs. These different point of views made me think about the pros and cons of each technology like Angular vs React and I got a much deeper understanding of them.\n
+    `,
     techStack: [
       { logo: "", name: "React" },
       { logo: "", name: "redux" },
@@ -20,8 +24,8 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
   },
   restaurantfinder: {
     headingText: "Restaurant Finder",
-    projectDescription:
-      "This mobile app allows users to discover restaurants around them or based on a desired location. Users can view results as a list or on a map and can also see the details of the restaurant such as rating and menu.",
+    projectDescription: `This mobile app allows users to discover restaurants around them or based on a desired location. Users can view results as a list or on a map and can also see the details of the restaurant such as rating and menu.\n
+      While working on this project I learned that each React Native app has a Javascript runtime that is used to execute all of the React related code, and that there is a bridge that connects this runtime with native IOS or Android components to update the view.\n`,
     techStack: [
       { logo: "", name: "React Native" },
       { logo: "", name: "google-maps" },
@@ -36,8 +40,8 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
   },
   caffemobileorder: {
     headingText: "Caffe mobile order Website",
-    projectDescription:
-      "The website gives users a convenient way to see a local caffe's menu and purchase items online for pickup. It is completely mobile friendly.",
+    projectDescription: `The website gives users a convenient way to see a local caffe's menu and purchase items online for pickup. It is completely mobile friendly. The UI is inspired by the Starbucks online order website.\n
+      `,
     techStack: [
       { logo: "", name: "Angular" },
       { logo: "", name: "Firebase" },
@@ -51,7 +55,6 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
       "/caffeMobileOrder/caffe-cart.png",
     ],
   },
-
 };
 
 export interface ProjectDetails {
