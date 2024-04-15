@@ -22,6 +22,23 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
       "/e-commerce/payment.png",
     ],
   },
+  projectmanager: {
+    headingText: "Project Manager",
+    projectDescription: `Building this project was a great learning experience, I learned the most important features NextJS offers like Server Side Rendering and various caching strategies, delivering outstanding user experiences with virtually no configuration compared to full client-side rendered React apps.\n
+    So far, the app consists of a login page, a projects page where tasks are displayed by status for each project, and users can add/edit tasks using NextJS form actions which are secure and easy to use for these use cases. The next features I’m thinking about adding are comments for each task so users can collaborate, an activity feed so teams can know what everyone is working on and a section to send invites for other users to collaborate.\n
+    `,
+    techStack: [
+      { logo: "", name: "NextJs" },
+      { logo: "", name: "Prisma" },
+      { logo: "", name: "PostgresSQL" },
+      { logo: "", name: "Tailwindcss" },
+      { logo: "", name: "Storybook" },
+    ],
+    imageSources: [
+      "/project-manager/home.png",
+      "/project-manager/detail.png",
+    ],
+  },
   restaurantfinder: {
     headingText: "Restaurant Finder",
     projectDescription: `This mobile app allows users to discover restaurants around them or based on a desired location. Users can view results as a list or on a map and can also see the details of the restaurant such as rating and menu.\n

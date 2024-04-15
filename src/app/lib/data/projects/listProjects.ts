@@ -14,7 +14,13 @@ export async function listProjects(): Promise<ProjectListing[]> {
       description:
         "E-commerce clothing website with React frontend and serverless architecture.",
     },
-
+    {
+      projectId: "projectmanager",
+      imgSrc: "/project-manager/home.png",
+      projectName: "Project Manager",
+      description:
+        "Project manager web application using NextJs",
+    },
     {
       projectId: "restaurantfinder",
       imgSrc: "/meals-app-preview.png",
