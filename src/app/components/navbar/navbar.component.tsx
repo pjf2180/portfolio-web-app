@@ -11,7 +11,7 @@ export function Navbar() {
   const styleOne: string = "text-black";
   const styleTwo: string = "border-[#f8f8f8] text-white";
   const colorStyles = pathname === "/" ? styleTwo : styleOne;
-
+  
   const menuItems: MenuItem[] = [
     {
       displayText: "Home",
@@ -30,7 +30,8 @@ export function Navbar() {
     <div className="flex p-8 z-[1] relative">
       <ul className="flex">
         {menuItems.map((menuItem: MenuItem, idx) => {
-          const isActive: boolean = pathname === menuItem.href;
+          const firstSegment: string = pathname.split('/')[1];
+          const isActive: boolean = firstSegment === menuItem.href.slice(1);
           const isActiveStyle = isActive ? "font-semibold" : "font-medium";
           return (
             <li
