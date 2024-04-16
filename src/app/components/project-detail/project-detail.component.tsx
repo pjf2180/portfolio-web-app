@@ -34,7 +34,7 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
           ))}
         </div>
       </div>
-      <div className="w-full lg:w-1/2 max-lg:p-3 pl-2">
+      <div className="w-full lg:w-1/2 px-3 pl-2 ">
         <ResponsiveMasonry columnsCountBreakPoints={{ 0: 2 }}>
           <Masonry gutter="20px">
             {imageSources.map((imageSource) => {
