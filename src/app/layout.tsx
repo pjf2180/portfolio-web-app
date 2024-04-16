@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} font-sans`}>
-        <div className="relative container mx-auto h-screen px-8 pt-16 sm:pt-0">
-            <Navbar />
-          {children}
+        <div className="relative container mx-auto h-screen px-4 pt-16 sm:pt-0">
+          <Navbar />
+          <div className="py-6">{children}</div>
         </div>
       </body>
     </html>
