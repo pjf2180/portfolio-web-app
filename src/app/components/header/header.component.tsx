@@ -27,19 +27,18 @@ export function Header({ text, typeAnimation }: HeaderProps) {
   );
   const animatedContent = (
     <>
-      <h1 className={`${style.text} text-6xl`}>
-        <span ref={h1Ref}>&nbsp;</span>
-        <span
-          ref={caretRef}
-          className={[style.text, style.caret].join(" ")}
-        ></span>
-      </h1>
+      <span ref={h1Ref}>&nbsp;</span>
+      <span
+        ref={caretRef}
+        className={[style.text, " text-4xl sm:text-5xl md:text-6xl"].join(" ")}
+      ></span>
     </>
   );
-  const regularContent = (
-    <>
-      <h1 className={`${style.text} text-6xl`}>{text}</h1>
-    </>
+  const regularContent = <>{text}</>;
+  return (
+    <h1 className={`${style.text} text-4xl sm:text-5xl md:text-6xl`}>
+      {typeAnimation ? animatedContent : regularContent}
+    </h1>
   );
-  return typeAnimation ? animatedContent : regularContent;
+  return;
 }
