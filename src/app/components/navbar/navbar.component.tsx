@@ -13,7 +13,7 @@ export function Navbar() {
   const styleOne: string = "text-white sm:text-black";
   const styleTwo: string = "border-[#f8f8f8] text-white";
   const colorStyles = pathname === "/" ? styleTwo : styleOne;
-  const [menuIsOpen, setMenuIsOpen] = useState(true);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function Navbar() {
     const handleResize = () => {
       setMenuIsOpen(!mediaQuery.matches);
       setIsMobile(mediaQuery.matches);
-    }
+    };
 
     handleResize();
     mediaQuery.addEventListener("change", handleResize);
@@ -55,6 +55,8 @@ export function Navbar() {
       href: "/about",
     },
   ];
+  const displayMenu: boolean = menuIsOpen || !isMobile;
+
   return (
     <div className="flex flex-col z-[1] justify-end sm:justify-start py-4 sm:py-8 fixed top-0 left-0 right-0 sm:static bg-black sm:bg-transparent">
       <div className="sm:hidden flex justify-end px-4 bg-black">
@@ -64,7 +66,7 @@ export function Navbar() {
       </div>
       <ul
         className={`${
-          !menuIsOpen ? "hidden" : ""
+          displayMenu ? "" : "hidden"
         } flex flex-col sm:flex-row mt-4`}
       >
         {menuItems.map((menuItem: MenuItem, idx) => {
