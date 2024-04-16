@@ -37,6 +37,8 @@ const ALL_PROJECTS_BY_ID: { [id: string]: ProjectDetails } = {
     imageSources: [
       "/project-manager/home.png",
       "/project-manager/detail.png",
+      "/project-manager/tablet.png",
+      "/project-manager/mobile.png",
     ],
   },
   restaurantfinder: {
