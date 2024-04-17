@@ -18,7 +18,13 @@ export function FeaturedProject({
   return (
     <div className="">
       <div className="w-full h-[350px] relative border-black border-[1px] border-b-0">
-        <Image src={imgSrc} alt="Crown Clothing Home Page" fill priority />
+        <Image
+          src={imgSrc}
+          alt={`Image for ${projectName}`}
+          quality={100}
+          sizes="(max-width: 400px) 100vw, (max-width: 1280px) 50vw, 25vw "
+          fill
+        />
       </div>
       <div className="bg-white border-black border-[1px] h-[250px] p-3">
         <h3 className="font-bold text-xl my-4">{projectName}</h3>
