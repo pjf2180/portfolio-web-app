@@ -29,8 +29,8 @@ export default function ProjectDetail({ details }: ProjectDetailProps) {
               </li>
             ))}
           </ul>
-          {paragraphs.map((p) => (
-            <p className="my-3 text-base">{p}</p>
+          {paragraphs.map((p, i) => (
+            <p key={i} className="my-3 text-base">{p}</p>
           ))}
         </div>
       </div>

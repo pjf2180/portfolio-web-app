@@ -10,29 +10,23 @@ export function useTypingAnimation(
     if (elRef === null) {
       return;
     }
-    const type = useType(text);
-    if (animationStart) {
-      animationStart();
-    }
+    animationStart?.();
+    let currentCharacterIdx: number = 0;
+
+    const getNextCharacter = () => {
+      const nextStr = text.slice(0, currentCharacterIdx++);
+      return { value: nextStr, done: currentCharacterIdx === text.length + 1 };
+    };
+
     const intervalId = setInterval(() => {
-      const typeResult = type();
-      if(elRef.current){
+      const typeResult = getNextCharacter();
+      if (elRef.current) {
         elRef.current.innerText = typeResult.value;
       }
       if (typeResult.done) {
         clearInterval(intervalId);
-        if (animationEnd) {
-          animationEnd();
-        }
+        animationEnd?.();
       }
     }, 120);
-  }, []);
-}
-
-function useType(text: string) {
-  let currentCharacterIdx: number = 0;
-  return () => {
-    const nextStr = text.slice(0, currentCharacterIdx++);
-    return { value: nextStr, done: currentCharacterIdx === text.length + 1 };
-  };
+  }, [elRef, animationStart, animationEnd, text]);
 }

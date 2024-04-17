@@ -40,5 +40,4 @@ export function Header({ text, typeAnimation }: HeaderProps) {
       {typeAnimation ? animatedContent : regularContent}
     </h1>
   );
-  return;
 }

@@ -10,15 +10,15 @@ export default function AboutPage() {
         <div className="flex-1 md:min-w-[420px]">
           <h1 className="text-lg font-bold mb-4">About me</h1>
           <p className="text-base mb-4">
-            I'm an experienced full stack engineer with a passion for creating
+            I am an experienced full stack engineer with a passion for creating
             innovative and user-friendly applications. With over 5 years of
-            experience, I’ve learned to deal with ambiguity and make informed
+            experience, I have learned to deal with ambiguity and make informed
             decisions by prioritizing not only technical aspects but also all
             the other factors that make a great product.
           </p>
           <p className="mb-4">
             JavaScript/TypeScript libraries and frameworks are my strong suit.
-            However, I’m also familiar with other programming languages and
+            However, I am also familiar with other programming languages and
             mobile apps. I approach new technologies with enthusiasm and a
             commitment to improve continuously.
           </p>
@@ -26,7 +26,7 @@ export default function AboutPage() {
             What sets me apart is my ability to write clean, efficient code, and
             find areas of opportunity to improve the code base. I bring hands-on
             experience building, testing and integrating complex systems using
-            cloud services such as AWS and Azure. I'm a problem solver, and love
+            cloud services such as AWS and Azure. I am a problem solver, and love
             working collectively towards making incredible products.
           </p>
         </div>
