@@ -5,12 +5,11 @@ export function Background() {
   return (
     <div className={styles.imageContainer}>
       <Image
-        className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+        className="relative"
         src="/adam-kool-ndN00KmbJ1c-unsplash.jpg"
-        alt="Yosemite Forest Background"
+        alt="Yosemite National Park Forest Background"
         quality={100}
         style={{ objectFit: "cover" }}
-        sizes="100vw"
         fill
         priority
       />
