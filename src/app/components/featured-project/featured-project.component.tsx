@@ -24,6 +24,7 @@ export function FeaturedProject({
           quality={100}
           sizes="(max-width: 400px) 100vw, (max-width: 1280px) 50vw, 25vw "
           fill
+          priority
         />
       </div>
       <div className="bg-white border-black border-[1px] h-[250px] p-3">
